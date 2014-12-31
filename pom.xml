@@ -13,6 +13,7 @@
         <appengine.target.version>1.7.5</appengine.target.version>
         <wro4j.version>1.3.5</wro4j.version>
         <jslint.version>1.0.1</jslint.version>
+        <jetty.version>9.2.6.v20141205</jetty.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -98,6 +99,12 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
             </plugin>
 
             <plugin>
