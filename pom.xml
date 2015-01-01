@@ -12,7 +12,7 @@
         <appengine.app.version>1</appengine.app.version>
         <appengine.target.version>1.7.5</appengine.target.version>
         <wro4j.version>1.3.5</wro4j.version>
-        <jslint.version>1.0.1</jslint.version>
+        <jslint4java.version>2.0.5</jslint4java.version>
         <jetty.version>9.2.6.v20141205</jetty.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -81,20 +81,25 @@
             </plugin>
 
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jslint-maven-plugin</artifactId>
-                <version>${jslint.version}</version>
+                <groupId>com.googlecode.jslint4java</groupId>
+                <artifactId>jslint4java-maven-plugin</artifactId>
+                <version>${jslint4java.version}</version>
                 <executions>
                     <execution>
-                        <!--<phase>integration-test</phase>-->
+                        <id>lint</id>
+                        <phase>process-resources</phase>
                         <goals>
-                            <goal>jslint</goal>
-                            <goal>test-jslint</goal>
+                            <goal>lint</goal>
                         </goals>
                         <configuration>
-                            <sourceJsFolder>${basedir}/src/main/webapp/js</sourceJsFolder>
+                            <failOnError>false</failOnError>
+                            <options>
+                            </options>
+                            <sourceFolders>
+                                <sourceFolder>${basedir}/src/main/webapp/js</sourceFolder>
+                            </sourceFolders>
                             <excludes>
-                                <exclude>jq/*</exclude>
+                                <exclude>**/jq/*.js</exclude>
                             </excludes>
                         </configuration>
                     </execution>
