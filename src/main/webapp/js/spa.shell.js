@@ -17,7 +17,7 @@ spa.shell = (function (global) {
             chat_extend_height: 450,
             chat_retract_height: 15
         },
-        stateMap = { '$container' : null },
+        stateMap = { $container : null },
         jqueryMap = {},
 
         setJqueryMap, toggleChat, initModule;
@@ -25,8 +25,8 @@ spa.shell = (function (global) {
     setJqueryMap = function () {
         var $container = stateMap.$container;
         jqueryMap = {
-            '$container' : $container,
-            '$chat': $container.find( '.spa-shell-chat' )
+            $container : $container,
+            $chat: $container.find( '.spa-shell-chat' )
         };
     };
 
@@ -65,13 +65,12 @@ spa.shell = (function (global) {
 
 
     initModule = function ( $container ) {
+        stateMap.$container = $container;
         // load HTML and map jQuery collections
         $container.load('layout.html', function (html) {
             configMap.main_html = html;
+            setJqueryMap();
         });
-        stateMap.$container = $container;
-        $container.html( configMap.main_html );
-        setJqueryMap();
 
         // test toggle
         global.setTimeout(function () {toggleChat( true ); }, 3000);
