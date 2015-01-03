@@ -12,7 +12,7 @@
 /*global $, spa, window */
 spa.shell = (function (global) {
     var configMap = {
-            chat_extend_time: 1000,
+            chat_extend_time: 250,
             chat_retract_time: 300,
             chat_extend_height: 450,
             chat_retract_height: 15,
