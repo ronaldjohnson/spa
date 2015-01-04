@@ -14,7 +14,6 @@
 
     <properties>
         <appengine.app.version>1</appengine.app.version>
-        <wro4j.version>1.3.5</wro4j.version>
         <jslint4java.version>2.0.5</jslint4java.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
