@@ -4,14 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-    <artifactId>spa-parent</artifactId>
-    <groupId>com.manning.spa</groupId>
-    <version>1.0.0-SNAPSHOT</version>
-  </parent>
+        <artifactId>spa</artifactId>
+        <groupId>com.manning.spa</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
     <packaging>ear</packaging>
     <version>1.0</version>
 
-    <groupId>com.manning.spa</groupId>
     <artifactId>spa-ear</artifactId>
 
     <properties>

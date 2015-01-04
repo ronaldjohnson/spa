@@ -4,19 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-    <artifactId>spa-parent</artifactId>
-    <groupId>com.manning.spa</groupId>
-    <version>1.0.0-SNAPSHOT</version>
-  </parent>
+        <artifactId>spa</artifactId>
+        <groupId>com.manning.spa</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
     <packaging>war</packaging>
     <version>1.0</version>
 
-    <groupId>com.manning.spa</groupId>
     <artifactId>spa-rest-service</artifactId>
 
     <properties>
         <appengine.app.version>1</appengine.app.version>
-        <appengine.target.version>1.7.5</appengine.target.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
