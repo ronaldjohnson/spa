@@ -14,7 +14,6 @@
 
     <properties>
         <appengine.app.version>1</appengine.app.version>
-        <appengine.target.version>1.7.5</appengine.target.version>
         <wro4j.version>1.3.5</wro4j.version>
         <jslint4java.version>2.0.5</jslint4java.version>
 
