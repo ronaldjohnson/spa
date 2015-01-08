@@ -2,8 +2,4 @@
     <application>single-page-web-application</application>
     <version>${appengine.app.version}</version>
     <threadsafe>true</threadsafe>
-    <instance-class>B1</instance-class>
-    <manual-scaling>
-        <instances>1</instances>
-    </manual-scaling>
 </appengine-web-app>
