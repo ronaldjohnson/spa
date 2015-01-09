@@ -13,7 +13,7 @@
     <artifactId>spa-web-client</artifactId>
 
     <properties>
-        <appengine.app.version>${project.version}</appengine.app.version>
+        <appengine.app.version>1</appengine.app.version>
         <jslint4java.version>2.0.5</jslint4java.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

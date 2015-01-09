@@ -14,7 +14,6 @@
     <artifactId>spa-ear</artifactId>
 
     <properties>
-        <appengine.app.version>test</appengine.app.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

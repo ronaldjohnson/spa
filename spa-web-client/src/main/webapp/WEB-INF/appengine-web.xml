@@ -10,7 +10,4 @@
     </system-properties>
 
     <instance-class>F1</instance-class>
-    <manual-scaling>
-        <instances>5</instances>
-    </manual-scaling>
 </appengine-web-app>
