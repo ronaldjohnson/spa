@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
     <application>spa-web-client</application>
+    <module>default</module>
     <version>${appengine.app.version}</version>
     <threadsafe>true</threadsafe>
 
@@ -10,6 +11,6 @@
 
     <instance-class>F1</instance-class>
     <manual-scaling>
-        <instances>1</instances>
+        <instances>5</instances>
     </manual-scaling>
 </appengine-web-app>
