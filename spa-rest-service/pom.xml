@@ -14,7 +14,7 @@
     <artifactId>spa-rest-service</artifactId>
 
     <properties>
-        <appengine.app.version>1</appengine.app.version>
+        <environment>test</environment>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

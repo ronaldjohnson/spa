@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SPA Starter</title>
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/spa.css" th:href="@{/resources/css/spa.css}"/>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/spa.shell.css" th:href="@{/resources/css/spa.shell.css}">
+</head>
+<body>
+	<div id="spa"></div>
+
+	<!-- third-party javascript -->
+	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../../resources/js/jq/jquery.uriAnchor-1.1.3.js" th:src="@{/resources/js/jq/jquery.uriAnchor-1.1.3.js}"></script>
+
+	<!-- our javascript -->
+	<script src="../../resources/js/spa.js" th:src="@{/resources/js/spa.js}"></script>
+	<script src="../../resources/js/spa.shell.js" th:src="@{/resources/js/spa.shell.js}"></script>
+	<script type="text/javascript">
+		$(function() { spa.initModule( $('#spa')); });
+	</script>
+</body>
+</html>
