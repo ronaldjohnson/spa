@@ -14,7 +14,6 @@
     <artifactId>spa-rest-service</artifactId>
 
     <properties>
-        <environment>test</environment>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -23,7 +22,7 @@
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
-            <version>${appengine.target.version}</version>
+            <version>${gae.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -41,13 +40,13 @@
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-testing</artifactId>
-            <version>${appengine.target.version}</version>
+            <version>${gae.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-stubs</artifactId>
-            <version>${appengine.target.version}</version>
+            <version>${gae.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -84,7 +83,7 @@
             <plugin>
                 <groupId>com.google.appengine</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>${appengine.target.version}</version>
+                <version>${gae.version}</version>
             </plugin>
         </plugins>
     </build>

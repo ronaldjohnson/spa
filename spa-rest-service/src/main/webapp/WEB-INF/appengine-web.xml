@@ -2,11 +2,11 @@
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
     <application>spa-rest-service</application>
     <module>spa-rest-service</module>
-    <version>${environment}</version>
+    <version>${env}</version>
     <threadsafe>true</threadsafe>
 
     <system-properties>
-        <property name="spring.profiles.active" value="${environment},gae" />
+        <property name="spring.profiles.active" value="${env},gae" />
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
     </system-properties>
 

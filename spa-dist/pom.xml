@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spa</artifactId>
+        <groupId>com.manning.spa</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spa-dist</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.manning.spa</groupId>
+            <artifactId>spa-ear</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>ear</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.3</version>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>${assembly.xml}</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.google.appengine</groupId>
+                <artifactId>appengine-maven-plugin</artifactId>
+                <version>${gae.version}</version>
+                <configuration>
+                    <enableJarClasses>false</enableJarClasses>
+                    <appDir>${project.build.directory}/${project.build.finalName}-${env}</appDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>appserverConfig-dev</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>test</value>
+                </property>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <env>test</env>
+                <assembly.xml>src/assembly/test.xml</assembly.xml>
+            </properties>
+        </profile>
+    </profiles>
+</project>

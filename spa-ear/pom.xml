@@ -14,7 +14,6 @@
     <artifactId>spa-ear</artifactId>
 
     <properties>
-        <environment>prod</environment>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -69,7 +68,11 @@
             <plugin>
                 <groupId>com.google.appengine</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>${appengine.target.version}</version>
+                <version>${gae.version}</version>
+                <configuration>
+                    <enableJarClasses>false</enableJarClasses>
+                    <appDir>${project.build.directory}/${project.build.finalName}</appDir>
+                </configuration>
             </plugin>
         </plugins>
     </build>
