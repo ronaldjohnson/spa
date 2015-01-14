@@ -59,17 +59,12 @@
 
     <profiles>
         <profile>
-            <id>appserverConfig-dev</id>
+            <id>appserverConfig-env</id>
             <activation>
-                <property>
-                    <name>env</name>
-                    <value>test</value>
-                </property>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <env>test</env>
-                <assembly.xml>src/assembly/test.xml</assembly.xml>
+                <assembly.xml>src/assembly/env.xml</assembly.xml>
             </properties>
         </profile>
     </profiles>
