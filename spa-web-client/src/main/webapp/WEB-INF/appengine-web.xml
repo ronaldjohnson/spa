@@ -5,7 +5,7 @@
     <version>${env}</version>
     <threadsafe>true</threadsafe>
     <static-files>
-        <include path="/resources/**" />
+        <include path="/static/**" />
         <include path="/webjars/**" />
     </static-files>
     <system-properties>

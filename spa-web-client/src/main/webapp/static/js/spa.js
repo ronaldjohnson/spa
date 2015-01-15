@@ -7,7 +7,7 @@
     regexp: true, sloppy: true, vars: false,
     white: true
 */
-/*global $ */
+/*global $, spa:true */
 
 var spa = (function () {
     var initModule = function ( $container ) {
