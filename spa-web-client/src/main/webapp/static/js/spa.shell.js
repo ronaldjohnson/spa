@@ -179,7 +179,7 @@ spa.shell = (function (global) {
     initModule = function ( $container ) {
         stateMap.$container = $container;
         // load HTML and map jQuery collections
-        $container.load('static/layout.html', function (html) {
+        $container.load('layout.html', function (html) {
             configMap.main_html = html;
             setJqueryMap();
 
