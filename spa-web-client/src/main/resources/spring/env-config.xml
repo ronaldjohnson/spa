@@ -10,7 +10,27 @@
     </beans>
     <beans profile="dev">
         <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-            <property name="location" value="classpath:config/application-local.properties" />
+            <property name="location" value="classpath:config/application-dev.properties" />
+        </bean>
+    </beans>
+    <beans profile="test">
+        <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="location" value="classpath:config/application-test.properties" />
+        </bean>
+    </beans>
+    <beans profile="user">
+        <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="location" value="classpath:config/application-user.properties" />
+        </bean>
+    </beans>
+    <beans profile="stage">
+        <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="location" value="classpath:config/application-stage.properties" />
+        </bean>
+    </beans>
+    <beans profile="prod">
+        <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="location" value="classpath:config/application-prod.properties" />
         </bean>
     </beans>
 </beans>

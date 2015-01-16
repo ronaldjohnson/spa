@@ -1,3 +1,3 @@
-mvn appengine:devserver
-
-mvn appengine:update
+```
+mvn clean appengine:devserver -Denv=<environment>
+```
