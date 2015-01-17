@@ -176,7 +176,7 @@
                             <options>
                             </options>
                             <sourceFolders>
-                                <sourceFolder>${basedir}/src/main/webapp/resources/js</sourceFolder>
+                                <sourceFolder>${basedir}/src/main/webapp/static/js</sourceFolder>
                             </sourceFolders>
                             <excludes>
                                 <exclude>**/jq/*.js</exclude>
