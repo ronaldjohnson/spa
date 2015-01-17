@@ -55,4 +55,6 @@ strong {
 	visibility: hidden !important;
 	clear: both !important;
 }
+
+.spa-templates { display: none; }
 /* End utility selectors */
