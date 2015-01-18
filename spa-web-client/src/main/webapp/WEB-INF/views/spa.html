@@ -22,8 +22,8 @@
 	<div id="spa"></div>
 
 	<div id="spa-templates" >
-		<div th:include="spa.chat :: spa.chat"></div>
-		<div th:include="spa.shell :: spa.shell"></div>
+		<div th:include="spa.chat :: spa-chat"></div>
+		<div th:replace="spa.shell :: spa-shell"></div>
 	</div>
 	<!-- third-party javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" th:href="@{/webjars/jquery/1.9.1/jquery.min.js}"></script>

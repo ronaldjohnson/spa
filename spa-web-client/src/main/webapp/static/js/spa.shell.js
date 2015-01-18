@@ -180,6 +180,7 @@ spa.shell = (function (global) {
         stateMap.$container = $container;
         // load HTML and map jQuery collections
         configMap.main_html = $templates.find('.spa-shell').html();
+        $container.html( configMap.main_html );
         setJqueryMap();
 
         // initialize chat slider and bind click handler

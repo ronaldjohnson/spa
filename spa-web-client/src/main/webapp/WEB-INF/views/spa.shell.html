@@ -1,25 +1,22 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <body>
 
-<div th:fragment="spa.shell">
-    <div class="spa-shell">
-        <div class="spa-shell-head">
-            <div class="spa-shell-head-logo"></div>
-            <div class="spa-shell-head-acct"></div>
-            <div class="spa-shell-head-search"></div>
-        </div>
-        <div class="spa-shell-main">
-            <div class="spa-shell-main-nav"></div>
-            <div class="spa-shell-main-content"></div>
-        </div>
-        <div class="spa-shell-foot"></div>
-        <div class="spa-shell-chat"></div>
-        <div class="spa-shell-modal"></div>
+<div th:fragment="spa-shell" class="spa-shell">
+    <div class="spa-shell-head">
+        <div class="spa-shell-head-logo"></div>
+        <div class="spa-shell-head-acct"></div>
+        <div class="spa-shell-head-search"></div>
     </div>
+    <div class="spa-shell-main">
+        <div class="spa-shell-main-nav"></div>
+        <div class="spa-shell-main-content"></div>
+    </div>
+    <div class="spa-shell-foot"></div>
+    <div class="spa-shell-chat"></div>
+    <div class="spa-shell-modal"></div>
 </div>
 
 </body>
