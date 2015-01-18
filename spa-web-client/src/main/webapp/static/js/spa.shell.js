@@ -194,7 +194,7 @@ spa.shell = (function (global) {
 
         // configure and initialize feature modules
         spa.chat.configModule( {} );
-        spa.chat.initModule( jqueryMap.$chat );
+        spa.chat.initModule( jqueryMap.$chat, $templates );
 
         $(global)
             .bind( 'hashchange', onHashchange )

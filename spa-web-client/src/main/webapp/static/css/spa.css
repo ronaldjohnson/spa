@@ -56,5 +56,5 @@ strong {
 	clear: both !important;
 }
 
-.spa-templates { display: none; }
+#spa-templates { display: none; }
 /* End utility selectors */

@@ -10,8 +10,8 @@
 /*global $, spa:true */
 
 var spa = (function () {
-    var initModule = function ( $container ) {
-        spa.shell.initModule( $container );
+    var initModule = function ( $container, $templates ) {
+        spa.shell.initModule( $container, $templates );
     };
 
     return {initModule: initModule};
