@@ -1,11 +1,20 @@
 <!DOCTYPE HTML>
+<!--
+	spa.html
+    spa browser document
+-->
+
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>SPA Starter</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge" />
+	<title>SPA Chapter 4</title>
 
 	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="../../static/css/spa.css"
 		  th:href="@{/static/css/spa.css}"/>
+	<link rel="stylesheet" type="text/css" href="../../static/css/spa.chat.css"
+		  th:href="@{/static/css/spa.chat.css}"/>
 	<link rel="stylesheet" type="text/css" href="../../static/css/spa.shell.css"
 		  th:href="@{/static/css/spa.shell.css}"/>
 </head>
@@ -22,7 +31,10 @@
 
 	<!-- our javascript -->
 	<script src="../../static/js/spa.js" th:src="@{/static/js/spa.js}"></script>
+	<script src="../../static/js/spa.util.js" th:src="@{/static/js/spa.util.js}"></script>
+	<script src="../../static/js/spa.model.js" th:src="@{/static/js/spa.model.js}"></script>
 	<script src="../../static/js/spa.shell.js" th:src="@{/static/js/spa.shell.js}"></script>
+	<script src="../../static/js/spa.chat.js" th:src="@{/static/js/spa.chat.js}"></script>
 	<script type="text/javascript">
 		$(function() { spa.initModule( $('#spa')); });
 	</script>
