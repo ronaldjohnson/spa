@@ -176,18 +176,16 @@ spa.shell = (function (global) {
         return false;
     };
 
-    initModule = function ( $container ) {
+    initModule = function ( $container, $templates ) {
         stateMap.$container = $container;
         // load HTML and map jQuery collections
-        $container.load('layout.html', function (html) {
-            configMap.main_html = html;
-            setJqueryMap();
+        configMap.main_html = $templates.find('.spa-shell').html();
+        setJqueryMap();
 
-            // initialize chat slider and bind click handler
-            stateMap.is_chat_retracted = true;
-            jqueryMap.$chat.attr('title', configMap.chat_retracted_title)
-                .click( onClickChat );
-        });
+        // initialize chat slider and bind click handler
+        stateMap.is_chat_retracted = true;
+        jqueryMap.$chat.attr('title', configMap.chat_retracted_title)
+            .click( onClickChat );
 
         // configure uriAnchor to use our schema
         $.uriAnchor.configModule({
