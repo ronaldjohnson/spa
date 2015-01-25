@@ -51,7 +51,7 @@
                 <version>${gae.version}</version>
                 <configuration>
                     <enableJarClasses>false</enableJarClasses>
-                    <appDir>${project.build.directory}/${project.build.finalName}-${env}</appDir>
+                    <appDir>${project.build.directory}/${project.build.finalName}/${project.build.finalName}</appDir>
                 </configuration>
             </plugin>
         </plugins>
@@ -65,6 +65,7 @@
             </activation>
             <properties>
                 <assembly.xml>src/assembly/env.xml</assembly.xml>
+                <assembly.appendAssemblyId>false</assembly.appendAssemblyId>
             </properties>
         </profile>
     </profiles>
