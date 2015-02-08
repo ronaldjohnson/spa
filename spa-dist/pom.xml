@@ -67,5 +67,21 @@
                 <assembly.appendAssemblyId>false</assembly.appendAssemblyId>
             </properties>
         </profile>
+        <profile>
+            <id>appserverConfig-dev</id>
+            <properties>
+                <env>dev</env>
+                <assembly.xml>src/assembly/src.xml</assembly.xml>
+                <assembly.appendAssemblyId>true</assembly.appendAssemblyId>
+            </properties>
+        </profile>
+        <profile>
+            <id>appserverConfig-test</id>
+            <properties>
+                <env>test</env>
+                <assembly.xml>src/assembly/src.xml</assembly.xml>
+                <assembly.appendAssemblyId>true</assembly.appendAssemblyId>
+            </properties>
+        </profile>
     </profiles>
 </project>
