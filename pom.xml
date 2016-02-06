@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
   <properties>
     <jetty.version>9.2.6.v20141205</jetty.version>
-    <gae.version>1.9.17</gae.version>
+    <gae.version>1.9.31</gae.version>
   </properties>
 
   <modules>
