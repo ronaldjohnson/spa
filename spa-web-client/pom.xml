@@ -157,7 +157,6 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
-                    <archiveClasses>true</archiveClasses>
                 </configuration>
             </plugin>
 
@@ -204,6 +203,7 @@
 
         </plugins>
         <resources>
+            <resource><directory>${basedir}/src/main/resources</directory></resource>
             <resource>
                 <directory>src/main/resources</directory>
                 <includes><include>config/application*.properties</include></includes>

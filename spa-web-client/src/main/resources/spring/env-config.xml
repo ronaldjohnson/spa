@@ -33,4 +33,9 @@
             <property name="location" value="classpath:config/application-prod.properties" />
         </bean>
     </beans>
+    <beans profile="!jetty">
+        <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="location" value="classpath:META-INF/maven/com.manning.spa/spa-web-client/pom.properties" />
+        </bean>
+    </beans>
 </beans>
