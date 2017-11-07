@@ -13,6 +13,8 @@
     <artifactId>spa-ear</artifactId>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -35,17 +37,18 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <version>2.5.1</version>
+                <version>3.7.0</version>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
-                <version>2.10</version>
+                <version>2.10.1</version>
                 <configuration>
                     <filtering>true</filtering>
                     <unpackTypes>war</unpackTypes>
@@ -65,12 +68,20 @@
             </plugin>
 
             <plugin>
-                <groupId>com.google.appengine</groupId>
+                <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>${gae.version}</version>
+                <version>1.3.1</version>
                 <configuration>
-                    <enableJarClasses>false</enableJarClasses>
-                    <appDir>${project.build.directory}/${project.build.finalName}</appDir>
+                    <services>
+                        <!-- your default service -->
+                        <service>
+                            ${project.build.directory}/${project.name}-${project.version}/spa-rest-service
+                        </service>
+                        <!-- for each service in your EARs application.xml -->
+                        <service>
+                            ${project.build.directory}/${project.name}-${project.version}/spa-web-client
+                        </service>
+                    </services>
                 </configuration>
             </plugin>
         </plugins>

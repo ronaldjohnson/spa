@@ -15,10 +15,14 @@
     <properties>
         <jslint4java.version>2.0.5</jslint4java.version>
         <spring.version>4.1.4.RELEASE</spring.version>
+        <google-api.version>1.23.0</google-api.version>
         <thymeleaf.version>2.1.2.RELEASE</thymeleaf.version>
         <slf4j.version>1.7.2</slf4j.version>
         <logback.version>1.0.9</logback.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
 
     <dependencies>
@@ -72,9 +76,14 @@
             <version>${gae.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client-appengine</artifactId>
+            <version>${google-api.version}</version>
+        </dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
 
@@ -138,8 +147,8 @@
                 <version>2.5.1</version>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
@@ -193,26 +202,16 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>com.google.appengine</groupId>
-                <artifactId>appengine-maven-plugin</artifactId>
-                <version>${gae.version}</version>
-                <executions>
-                    <execution>
-                        <configuration></configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
         <resources>
             <resource>
-                <directory>${basedir}/src/main/webapp/WEB-INF</directory>
-                <includes><include>appengine-web.xml</include></includes>
+                <directory>src/main/resources</directory>
+                <includes><include>config/application*.properties</include></includes>
                 <filtering>true</filtering>
             </resource>
             <resource>
-                <directory>${basedir}/src/main/webapp/WEB-INF</directory>
-                <excludes><exclude>appengine-web.xml</exclude></excludes>
+                <directory>src/main/resources</directory>
+                <excludes><exclude>config/application*.properties</exclude></excludes>
                 <filtering>false</filtering>
             </resource>
         </resources>

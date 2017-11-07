@@ -7,8 +7,8 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
-    <jetty.version>9.2.6.v20141205</jetty.version>
-    <gae.version>1.9.31</gae.version>
+    <jetty.version>9.3.7.v20160115</jetty.version>
+    <gae.version>1.9.59</gae.version>
   </properties>
 
   <modules>
@@ -31,6 +31,11 @@
           <configuration>
               <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>1.3.1</version>
       </plugin>
     </plugins>
   </build>
