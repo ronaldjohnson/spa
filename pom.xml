@@ -14,7 +14,6 @@
   <modules>
     <module>spa-web-client</module>
     <module>spa-rest-service</module>
-    <module>spa-ear</module>
   </modules>
 
   <!-- http://maven.apache.org/scm/git.html -->
@@ -36,6 +35,11 @@
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
         <version>1.3.1</version>
+        <configuration>
+          <jvmFlags>
+            <jvmFlag>-Dspring.profiles.active=local</jvmFlag>
+          </jvmFlags>
+        </configuration>
       </plugin>
     </plugins>
   </build>

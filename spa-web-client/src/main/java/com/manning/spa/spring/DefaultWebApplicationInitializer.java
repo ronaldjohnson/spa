@@ -1,15 +1,18 @@
 package com.manning.spa.spring;
 
-import com.google.apphosting.api.ApiProxy;
-import org.springframework.context.annotation.Configuration;
+import com.google.appengine.api.utils.SystemProperty;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 
-@Configuration
+import java.util.logging.Logger;
+
 public class DefaultWebApplicationInitializer extends AbstractDispatcherServletInitializer {
+    private final static Logger logger = Logger.getLogger(DefaultWebApplicationInitializer.class.getName());
 
     private final String GAE_PLATFORM = "gae";
+    private final int MAJOR_VERSION = 0;
+    private final int MINOR_VERSION = 1;
 
     @Override
     protected WebApplicationContext createRootApplicationContext() {
@@ -28,10 +31,18 @@ public class DefaultWebApplicationInitializer extends AbstractDispatcherServletI
     }
 
     private void addActiveProfiles(XmlWebApplicationContext cxt) {
-        if(ApiProxy.getCurrentEnvironment() != null) {
-            cxt.getEnvironment().addActiveProfile(ApiProxy.getCurrentEnvironment().getVersionId());
+        logger.info("Environment: " + SystemProperty.environment.value() );
+
+        if (SystemProperty.environment.value() == SystemProperty.Environment.Value.Production) {
+            cxt.getEnvironment().addActiveProfile(determineEnvironment(SystemProperty.applicationVersion.get()));
             cxt.getEnvironment().addActiveProfile(GAE_PLATFORM);
         }
+
+    }
+
+    private String determineEnvironment(String majorAndMinorVersion) {
+        String[] version = majorAndMinorVersion.split("\\.");
+        return version[MAJOR_VERSION];
     }
 
     @Override
