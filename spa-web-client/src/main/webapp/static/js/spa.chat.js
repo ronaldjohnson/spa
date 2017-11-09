@@ -33,8 +33,8 @@ spa.chat = (function () {
         slider_closed_em: 2,
         slider_opened_title: 'Click to close',
         slider_closed_title: 'Click to open',
-        chat_model = null,
-        people_model = null,
+        chat_model: null,
+        people_model: null,
         set_chat_anchor: null
     },
     stateMap = {
