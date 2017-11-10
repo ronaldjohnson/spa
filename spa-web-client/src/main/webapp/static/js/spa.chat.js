@@ -154,11 +154,17 @@ spa.chat = (function () {
         return true;
     };
 
-    initModule = function ( $container, $templates ) {
+    initModule = function ( $append_target, $templates ) {
         configMap.$main_html = $templates.find('.spa-chat');
-        $container.html( configMap.$main_html );
-        stateMap.$container = $container;
+        $append_target.html( configMap.$main_html );
+        stateMap.$append_target = $append_target;
         setJqueryMap();
+        setPxSizes();
+
+        jqueryMap.$toggle.prop( 'title', configMap.slider_closed_title );
+        jqueryMap.$head.click( onClickToggle );
+        stateMap.position_type = 'closed';
+
         return true;
     };
 
