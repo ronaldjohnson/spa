@@ -13,7 +13,7 @@
 spa.shell = (function (global) {
     var configMap = {
             anchor_schema_map: {
-                chat: { open : true, closed : true }
+                chat: { opened : true, closed : true }
             },
             main_html: null,
             chat_extend_time: 250,
@@ -24,15 +24,13 @@ spa.shell = (function (global) {
             chat_retracted_title: 'Click to extend'
         },
         stateMap = {
-            $container : null,
-            anchor_map: {},
-            is_chat_retracted: true
+            anchor_map: {}
          },
         jqueryMap = {},
 
         copyAnchorMap, setJqueryMap, toggleChat,
         changeAnchorPart, onHashchange,
-        onClickChat, initModule;
+        setChatAnchor, initModule;
 
     // utility methods
     copyAnchorMap = function () {
