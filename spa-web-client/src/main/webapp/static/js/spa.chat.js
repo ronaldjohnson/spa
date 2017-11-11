@@ -169,6 +169,7 @@ spa.chat = (function () {
     };
 
     return {
+        setSliderPosition: setSliderPosition,
         configModule: configModule,
         initModule: initModule
     };
