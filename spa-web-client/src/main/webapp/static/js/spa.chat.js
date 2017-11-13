@@ -15,7 +15,7 @@
 spa.chat = (function () {
     //--------------------- BEGIN MODULE SCOPE VARIABLES ------------
     var configMap = {
-        $main_html: null,
+        main_html: null,
         settable_map: {
             slider_open_time: true,
             slider_close_time: true,
@@ -155,8 +155,8 @@ spa.chat = (function () {
     };
 
     initModule = function ( $append_target, $templates ) {
-        configMap.$main_html = $templates.find('.spa-chat');
-        $append_target.html( configMap.$main_html );
+        configMap.main_html = $templates.find('#spa-chat').html();
+        $append_target.html( configMap.main_html );
         stateMap.$append_target = $append_target;
         setJqueryMap();
         setPxSizes();

@@ -22,7 +22,7 @@
 	<div id="spa"></div>
 
 	<div id="spa-templates" style="display: none;">
-		<div th:include="spa.chat :: spa-chat"></div>
+		<div th:replace="spa.chat :: spa-chat"></div>
 		<div th:replace="spa.shell :: spa-shell"></div>
 	</div>
 
