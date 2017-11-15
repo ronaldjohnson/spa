@@ -23,6 +23,8 @@ spa.chat = (function () {
             slider_closed_em: true,
             slider_opened_title: true,
             slider_closed_title: true,
+            slider_opened_min_em: 10,
+            slider_height_min_em: 20,
             chat_model: true,
             people_model: true,
             set_chat_anchor: true
@@ -76,9 +78,15 @@ spa.chat = (function () {
     };
 
     setPxSizes = function () {
-        var px_per_em, opened_height_em;
+        var px_per_em, window_height_em, opened_height_em;
         px_per_em = getEmSize( jqueryMap.$slider.get(0));
-        opened_height_em = configMap.slider_opened_em;
+        window_height_em = Math.floor(
+            ( $(window).height() / px_per_em ) + 0.5
+        );
+        opened_height_em =
+            window_height_em > configMap.window_height_min_em
+            ? configMap.slider_opened_em
+            : configMap.slider_opened_min_em;
         stateMap.px_per_em = px_per_em;
         stateMap.slider_closed_px = configMap.slider_closed_em * px_per_em;
         stateMap.slider_open_px = opened_height_em * px_per_em;
@@ -152,6 +160,17 @@ spa.chat = (function () {
             settable_map: configMap.settable_map,
             config_map: configMap
         });
+        return true;
+    };
+
+    handleResize = function () {
+        // don't do anything if we don't have a slider container
+        if( ! jqueryMap.$slider ) { return false; }
+
+        setPxSizes();
+        if ( stateMap.position_type === 'opened' ) {
+            jqueryMap.$slider.css({ height: stateMap.slider_opened_px });
+        }
         return true;
     };
 
