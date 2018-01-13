@@ -4,7 +4,7 @@
 
   <groupId>com.manning.spa</groupId>
   <artifactId>spa</artifactId>
-  <version>1.4.0</version>
+  <version>1.4.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <jetty.version>9.3.7.v20160115</jetty.version>
@@ -19,7 +19,7 @@
   <!-- http://maven.apache.org/scm/git.html -->
   <scm>
     <developerConnection>scm:git:https://github.com/ronaldjohnson/spa.git</developerConnection>
-    <tag>spa-1.4.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
