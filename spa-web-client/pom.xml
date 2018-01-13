@@ -5,7 +5,7 @@
     <parent>
         <artifactId>spa</artifactId>
         <groupId>com.manning.spa</groupId>
-        <version>1.4.0</version>
+        <version>1.4.1-SNAPSHOT</version>
     </parent>
     <packaging>war</packaging>
 
