@@ -6,10 +6,9 @@
     <parent>
         <artifactId>spa</artifactId>
         <groupId>com.manning.spa</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.3.0-SNAPSHOT</version>
     </parent>
     <packaging>ear</packaging>
-    <version>1.0</version>
 
     <artifactId>spa-ear</artifactId>
 

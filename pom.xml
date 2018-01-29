@@ -4,7 +4,7 @@
 
   <groupId>com.manning.spa</groupId>
   <artifactId>spa</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <jetty.version>9.2.6.v20141205</jetty.version>
